@@ -1,27 +1,244 @@
-<a class="button"
-   href="https://wa.me/628111929798?text=Halo%20Pak%20Irwan%2C%20saya%20mendapatkan%20kontak%20dari%20kartu%20nama%20HOMA."
-   target="_blank">
-    WhatsApp
-</a>
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<a class="button"
-   href="https://mail.google.com/mail/u/0/?view=cm&fs=1&to=harmoni.optimal.mangala%40gmail.com"
-   target="_blank">
-    Email
-</a>
+<title>HOMA | Irwan Tan</title>
 
-<a class="button"
-   href="contact.vcf">
-    Save Contact
-</a>
+<style>
+* {
+    box-sizing: border-box;
+}
 
-<div class="address">
-    Ruko Sentral Point C17<br>
-    Jl. Harapan Indah Raya<br>
-    Pejuang - Medan Satria<br>
-    BEKASI
+body {
+    margin: 0;
+    min-height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+    background:
+        radial-gradient(circle at 50% 0%, #3b321d 0%, #121212 35%, #050505 75%);
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 24px;
+}
+
+.card {
+    width: 100%;
+    max-width: 430px;
+    padding: 36px 26px 30px;
+    background: linear-gradient(145deg, #181818, #080808);
+    border: 1px solid #b9943f;
+    border-radius: 22px;
+    box-shadow:
+        0 20px 60px rgba(0,0,0,.7),
+        inset 0 0 30px rgba(185,148,63,.05);
+    text-align: center;
+}
+
+.logo {
+    font-size: 58px;
+    font-weight: 900;
+    letter-spacing: 6px;
+    color: #d9b65b;
+    text-shadow: 0 3px 15px rgba(217,182,91,.3);
+}
+
+.company {
+    margin-top: -3px;
+    color: #d9b65b;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.line {
+    width: 80px;
+    height: 1px;
+    background: #b9943f;
+    margin: 25px auto;
+}
+
+.name {
+    font-size: 28px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.position {
+    color: #aaa;
+    font-size: 13px;
+    margin-top: 7px;
+}
+
+.button {
+    display: block;
+    width: 100%;
+    margin: 14px 0;
+    padding: 16px;
+    border: 1px solid #b9943f;
+    border-radius: 12px;
+    background: linear-gradient(90deg, #151515, #242018);
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all .2s ease;
+}
+
+.button:hover {
+    background: #b9943f;
+    color: #080808;
+}
+
+.email-box {
+    display: none;
+    margin-top: 10px;
+    padding: 18px;
+    border: 1px solid #80672d;
+    border-radius: 12px;
+    background: #111;
+}
+
+.email-address {
+    color: #d9b65b;
+    font-size: 14px;
+    word-break: break-word;
+    margin-bottom: 14px;
+}
+
+.small-button {
+    display: block;
+    margin: 8px 0;
+    padding: 12px;
+    border-radius: 9px;
+    border: 1px solid #80672d;
+    color: #fff;
+    text-decoration: none;
+    font-size: 13px;
+}
+
+.small-button:hover {
+    background: #b9943f;
+    color: #111;
+}
+
+.address {
+    margin-top: 27px;
+    color: #999;
+    font-size: 12px;
+    line-height: 1.7;
+}
+
+.footer {
+    margin-top: 26px;
+    color: #b9943f;
+    font-size: 10px;
+    letter-spacing: 2px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="card">
+
+    <div class="logo">HOMA</div>
+
+    <div class="company">
+        HARMONI OPTIMAL MANGALA
+    </div>
+
+    <div class="line"></div>
+
+    <div class="name">
+        IRWAN TAN
+    </div>
+
+    <div class="position">
+        Harmoni Optimal Mangala
+    </div>
+
+    <!-- WHATSAPP -->
+    <a class="button"
+       href="https://wa.me/628111929798?text=Halo%20Pak%20Irwan%2C%20saya%20mendapatkan%20kontak%20dari%20kartu%20nama%20HOMA."
+       target="_blank">
+        WhatsApp
+    </a>
+
+    <!-- EMAIL -->
+    <button class="button" onclick="showEmail()">
+        Email
+    </button>
+
+    <div id="emailBox" class="email-box">
+
+        <div class="email-address">
+            harmoni.optimal.mangala@gmail.com
+        </div>
+
+        <a class="small-button"
+           href="https://mail.google.com/mail/?view=cm&fs=1&to=harmoni.optimal.mangala%40gmail.com"
+           target="_blank">
+            Open Gmail
+        </a>
+
+        <button class="small-button"
+                onclick="copyEmail()">
+            Copy Email
+        </button>
+
+    </div>
+
+    <!-- SAVE CONTACT -->
+    <a class="button"
+       href="contact.vcf">
+        Save Contact
+    </a>
+
+    <div class="address">
+        Ruko Sentral Point C17<br>
+        Jl. Harapan Indah Raya<br>
+        Pejuang - Medan Satria<br>
+        BEKASI
+    </div>
+
+    <div class="footer">
+        HARMONI OPTIMAL MANGALA
+    </div>
+
 </div>
 
-<div class="footer">
-    HARMONI OPTIMAL MANGALA
-</div>
+<script>
+
+function showEmail() {
+    const box = document.getElementById("emailBox");
+
+    if (box.style.display === "block") {
+        box.style.display = "none";
+    } else {
+        box.style.display = "block";
+    }
+}
+
+function copyEmail() {
+
+    const email = "harmoni.optimal.mangala@gmail.com";
+
+    navigator.clipboard.writeText(email).then(function() {
+
+        alert("Email berhasil disalin:\n" + email);
+
+    }).catch(function() {
+
+        alert("Email:\n" + email);
+
+    });
+}
+
+</script>
+
+</body>
+</html>
