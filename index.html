@@ -4,139 +4,320 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>HOMA | Irwan Tan</title>
+<meta name="description" content="Digital Business Card - Irwan Tan | Harmoni Optimal Mangala">
+<meta name="theme-color" content="#0a0a0a">
+
+<title>Irwan Tan | HOMA</title>
 
 <style>
 * {
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --gold: #d8b45a;
+    --gold-light: #f0d889;
+    --gold-dark: #9c792d;
+    --black: #080808;
+    --dark: #121212;
+    --gray: #999;
+    --white: #ffffff;
 }
 
 body {
-    margin: 0;
     min-height: 100vh;
     font-family: Arial, Helvetica, sans-serif;
     background:
-        radial-gradient(circle at 50% 0%, #3b321d 0%, #121212 35%, #050505 75%);
-    color: #fff;
+        radial-gradient(
+            circle at 50% 0%,
+            rgba(216,180,90,0.16) 0%,
+            rgba(20,20,20,0.5) 30%,
+            #050505 72%
+        );
+    color: var(--white);
     display: flex;
     justify-content: center;
-    align-items: center;
-    padding: 24px;
+    padding: 25px 15px;
 }
+
+/* MAIN CARD */
 
 .card {
     width: 100%;
-    max-width: 430px;
-    padding: 36px 26px 30px;
-    background: linear-gradient(145deg, #181818, #080808);
-    border: 1px solid #b9943f;
-    border-radius: 22px;
+    max-width: 470px;
+    min-height: 100vh;
+    padding: 34px 24px 30px;
+    background:
+        linear-gradient(
+            145deg,
+            rgba(25,25,25,0.98),
+            rgba(7,7,7,0.99)
+        );
+    border: 1px solid rgba(216,180,90,0.75);
+    border-radius: 24px;
     box-shadow:
-        0 20px 60px rgba(0,0,0,.7),
-        inset 0 0 30px rgba(185,148,63,.05);
-    text-align: center;
+        0 25px 80px rgba(0,0,0,0.8),
+        inset 0 0 50px rgba(216,180,90,0.025);
 }
 
+/* GOLD LINE */
+
+.gold-line {
+    width: 90px;
+    height: 2px;
+    margin: 0 auto 24px;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        var(--gold),
+        transparent
+    );
+}
+
+/* LOGO */
+
 .logo {
+    text-align: center;
     font-size: 58px;
     font-weight: 900;
     letter-spacing: 6px;
-    color: #d9b65b;
-    text-shadow: 0 3px 15px rgba(217,182,91,.3);
+    color: var(--gold);
+    text-shadow:
+        0 2px 4px #000,
+        0 0 20px rgba(216,180,90,0.18);
 }
 
 .company {
-    margin-top: -3px;
-    color: #d9b65b;
-    font-size: 12px;
+    text-align: center;
+    margin-top: 3px;
+    color: var(--gold-light);
+    font-size: 11px;
     font-weight: bold;
-    letter-spacing: 2px;
+    letter-spacing: 2.2px;
 }
 
-.line {
-    width: 80px;
-    height: 1px;
-    background: #b9943f;
-    margin: 25px auto;
+/* PROFILE */
+
+.profile {
+    text-align: center;
+    margin-top: 32px;
 }
 
 .name {
-    font-size: 28px;
+    font-size: 29px;
     font-weight: 700;
     letter-spacing: 1px;
 }
 
 .position {
+    margin-top: 7px;
     color: #aaa;
     font-size: 13px;
-    margin-top: 7px;
 }
 
-.button {
-    display: block;
-    width: 100%;
-    margin: 14px 0;
-    padding: 16px;
-    border: 1px solid #b9943f;
-    border-radius: 12px;
-    background: linear-gradient(90deg, #151515, #242018);
-    color: #fff;
-    text-decoration: none;
-    font-size: 16px;
+/* CONTACT TITLE */
+
+.section-title {
+    margin-top: 35px;
+    margin-bottom: 15px;
+    color: var(--gold);
+    text-align: center;
+    font-size: 11px;
     font-weight: bold;
-    cursor: pointer;
-    transition: all .2s ease;
+    letter-spacing: 3px;
 }
 
-.button:hover {
-    background: #b9943f;
+/* CONTACT BOX */
+
+.contact-box {
+    border: 1px solid rgba(216,180,90,0.45);
+    background: linear-gradient(
+        145deg,
+        rgba(255,255,255,0.035),
+        rgba(255,255,255,0.01)
+    );
+    border-radius: 15px;
+    padding: 17px;
+    margin-bottom: 13px;
+}
+
+.contact-header {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+}
+
+.icon {
+    width: 43px;
+    height: 43px;
+    border: 1px solid var(--gold);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--gold-light);
+    font-size: 20px;
+    flex-shrink: 0;
+}
+
+.contact-title {
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.contact-value {
+    margin-top: 5px;
+    color: #aaa;
+    font-size: 12px;
+    line-height: 1.5;
+    word-break: break-word;
+}
+
+/* BUTTON */
+
+.btn {
+    width: 100%;
+    border: 1px solid var(--gold-dark);
+    border-radius: 10px;
+    padding: 13px;
+    margin-top: 13px;
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: bold;
+    color: white;
+    background: linear-gradient(
+        90deg,
+        #151515,
+        #242018
+    );
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+
+.btn:hover {
+    background: linear-gradient(
+        90deg,
+        var(--gold-dark),
+        var(--gold)
+    );
+    color: #050505;
+}
+
+/* EMAIL ACTIONS */
+
+.email-actions {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 9px;
+}
+
+/* QUICK ACTION */
+
+.quick-actions {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 9px;
+    margin-top: 15px;
+}
+
+.quick-btn {
+    min-height: 74px;
+    border: 1px solid rgba(216,180,90,0.5);
+    border-radius: 12px;
+    background: #111;
+    color: white;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 7px;
+    font-size: 11px;
+    font-weight: bold;
+    text-align: center;
+    transition: .2s;
+}
+
+.quick-btn span {
+    color: var(--gold-light);
+    font-size: 22px;
+}
+
+.quick-btn:hover {
+    background: var(--gold);
     color: #080808;
 }
 
-.email-box {
-    display: none;
-    margin-top: 10px;
-    padding: 18px;
-    border: 1px solid #80672d;
-    border-radius: 12px;
-    background: #111;
+.quick-btn:hover span {
+    color: #080808;
 }
 
-.email-address {
-    color: #d9b65b;
-    font-size: 14px;
-    word-break: break-word;
-    margin-bottom: 14px;
+/* ADDRESS */
+
+.address-box {
+    margin-top: 30px;
+    padding: 20px;
+    border-top: 1px solid rgba(216,180,90,0.3);
+    border-bottom: 1px solid rgba(216,180,90,0.3);
+    text-align: center;
 }
 
-.small-button {
-    display: block;
-    margin: 8px 0;
-    padding: 12px;
-    border-radius: 9px;
-    border: 1px solid #80672d;
-    color: #fff;
-    text-decoration: none;
-    font-size: 13px;
-}
-
-.small-button:hover {
-    background: #b9943f;
-    color: #111;
+.address-title {
+    color: var(--gold);
+    font-size: 10px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
 }
 
 .address {
-    margin-top: 27px;
     color: #999;
     font-size: 12px;
-    line-height: 1.7;
+    line-height: 1.8;
 }
 
+/* FOOTER */
+
 .footer {
-    margin-top: 26px;
-    color: #b9943f;
-    font-size: 10px;
-    letter-spacing: 2px;
+    text-align: center;
+    margin-top: 25px;
+    color: var(--gold-dark);
+    font-size: 9px;
+    letter-spacing: 2.5px;
+}
+
+/* MOBILE */
+
+@media (max-width: 380px) {
+
+    .card {
+        padding: 28px 17px;
+    }
+
+    .logo {
+        font-size: 48px;
+    }
+
+    .name {
+        font-size: 25px;
+    }
+
+    .quick-actions {
+        grid-template-columns: 1fr;
+    }
+
+    .quick-btn {
+        min-height: 55px;
+        flex-direction: row;
+    }
+
+    .email-actions {
+        grid-template-columns: 1fr;
+    }
 }
 </style>
 </head>
@@ -145,65 +326,210 @@ body {
 
 <div class="card">
 
-    <div class="logo">HOMA</div>
+    <!-- LOGO -->
+
+    <div class="logo">
+        HOMA
+    </div>
 
     <div class="company">
         HARMONI OPTIMAL MANGALA
     </div>
 
-    <div class="line"></div>
+    <div class="gold-line"></div>
 
-    <div class="name">
-        IRWAN TAN
-    </div>
+    <!-- PROFILE -->
 
-    <div class="position">
-        Harmoni Optimal Mangala
-    </div>
+    <div class="profile">
 
-    <!-- WHATSAPP -->
-    <a class="button"
-       href="https://wa.me/628111929798?text=Halo%20Pak%20Irwan%2C%20saya%20mendapatkan%20kontak%20dari%20kartu%20nama%20HOMA."
-       target="_blank">
-        WhatsApp
-    </a>
-
-    <!-- EMAIL -->
-    <button class="button" onclick="showEmail()">
-        Email
-    </button>
-
-    <div id="emailBox" class="email-box">
-
-        <div class="email-address">
-            harmoni.optimal.mangala@gmail.com
+        <div class="name">
+            IRWAN TAN
         </div>
 
-        <a class="small-button"
-           href="https://mail.google.com/mail/?view=cm&fs=1&to=harmoni.optimal.mangala%40gmail.com"
-           target="_blank">
-            Open Gmail
+        <div class="position">
+            Harmoni Optimal Mangala
+        </div>
+
+    </div>
+
+
+    <!-- CONTACT -->
+
+    <div class="section-title">
+        CONTACT
+    </div>
+
+
+    <!-- WHATSAPP -->
+
+    <div class="contact-box">
+
+        <div class="contact-header">
+
+            <div class="icon">
+                ☎
+            </div>
+
+            <div>
+                <div class="contact-title">
+                    WhatsApp
+                </div>
+
+                <div class="contact-value">
+                    +62 811-192-9798
+                </div>
+            </div>
+
+        </div>
+
+        <a
+            class="btn"
+            href="https://wa.me/628111929798?text=Halo%20Pak%20Irwan%2C%20saya%20mendapatkan%20kontak%20dari%20kartu%20nama%20HOMA."
+            target="_blank"
+            rel="noopener">
+            💬 CHAT VIA WHATSAPP
         </a>
 
-        <button class="small-button"
+    </div>
+
+
+    <!-- EMAIL -->
+
+    <div class="contact-box">
+
+        <div class="contact-header">
+
+            <div class="icon">
+                ✉
+            </div>
+
+            <div>
+                <div class="contact-title">
+                    Email
+                </div>
+
+                <div class="contact-value">
+                    harmoni.optimal.mangala@gmail.com
+                </div>
+            </div>
+
+        </div>
+
+        <div class="email-actions">
+
+            <a
+                class="btn"
+                href="https://mail.google.com/mail/?view=cm&fs=1&to=harmoni.optimal.mangala%40gmail.com"
+                target="_blank"
+                rel="noopener">
+                ✉ OPEN GMAIL
+            </a>
+
+            <button
+                class="btn"
                 onclick="copyEmail()">
-            Copy Email
-        </button>
+                📋 COPY EMAIL
+            </button>
+
+        </div>
 
     </div>
+
 
     <!-- SAVE CONTACT -->
-    <a class="button"
-       href="contact.vcf">
-        Save Contact
-    </a>
 
-    <div class="address">
-        Ruko Sentral Point C17<br>
-        Jl. Harapan Indah Raya<br>
-        Pejuang - Medan Satria<br>
-        BEKASI
+    <div class="contact-box">
+
+        <div class="contact-header">
+
+            <div class="icon">
+                +
+            </div>
+
+            <div>
+
+                <div class="contact-title">
+                    Save Contact
+                </div>
+
+                <div class="contact-value">
+                    Simpan Irwan Tan ke kontak Anda
+                </div>
+
+            </div>
+
+        </div>
+
+        <a
+            class="btn"
+            href="contact.vcf">
+            📇 SAVE TO CONTACTS
+        </a>
+
     </div>
+
+
+    <!-- QUICK ACTION -->
+
+    <div class="section-title">
+        CONNECT WITH HOMA
+    </div>
+
+    <div class="quick-actions">
+
+        <a
+            class="quick-btn"
+            href="https://wa.me/628111929798"
+            target="_blank"
+            rel="noopener">
+
+            <span>☎</span>
+            WhatsApp
+
+        </a>
+
+
+        <button
+            class="quick-btn"
+            onclick="showEmail()">
+
+            <span>✉</span>
+            Email
+
+        </button>
+
+
+        <a
+            class="quick-btn"
+            href="contact.vcf">
+
+            <span>+</span>
+            Save Contact
+
+        </a>
+
+    </div>
+
+
+    <!-- ADDRESS -->
+
+    <div class="address-box">
+
+        <div class="address-title">
+            OFFICE
+        </div>
+
+        <div class="address">
+
+            Ruko Sentral Point C17<br>
+            Jl. Harapan Indah Raya<br>
+            Pejuang - Medan Satria<br>
+            BEKASI
+
+        </div>
+
+    </div>
+
 
     <div class="footer">
         HARMONI OPTIMAL MANGALA
@@ -211,31 +537,83 @@ body {
 
 </div>
 
+
 <script>
 
-function showEmail() {
-    const box = document.getElementById("emailBox");
-
-    if (box.style.display === "block") {
-        box.style.display = "none";
-    } else {
-        box.style.display = "block";
-    }
-}
+/* COPY EMAIL */
 
 function copyEmail() {
 
-    const email = "harmoni.optimal.mangala@gmail.com";
+    const email =
+        "harmoni.optimal.mangala@gmail.com";
 
-    navigator.clipboard.writeText(email).then(function() {
+    if (
+        navigator.clipboard &&
+        window.isSecureContext
+    ) {
 
-        alert("Email berhasil disalin:\n" + email);
+        navigator.clipboard
+            .writeText(email)
+            .then(function() {
 
-    }).catch(function() {
+                alert(
+                    "Email berhasil disalin:\n\n" +
+                    email
+                );
 
-        alert("Email:\n" + email);
+            })
+            .catch(function() {
 
-    });
+                alert(
+                    "Email:\n\n" +
+                    email
+                );
+
+            });
+
+    } else {
+
+        alert(
+            "Email:\n\n" +
+            email
+        );
+
+    }
+}
+
+
+/* EMAIL QUICK BUTTON */
+
+function showEmail() {
+
+    const email =
+        "harmoni.optimal.mangala@gmail.com";
+
+    if (
+        navigator.clipboard &&
+        window.isSecureContext
+    ) {
+
+        navigator.clipboard
+            .writeText(email)
+            .then(function() {
+
+                alert(
+                    "Email HOMA:\n\n" +
+                    email +
+                    "\n\nEmail telah disalin."
+                );
+
+            });
+
+    } else {
+
+        alert(
+            "Email HOMA:\n\n" +
+            email
+        );
+
+    }
 }
 
 </script>
